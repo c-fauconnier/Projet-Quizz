@@ -14,12 +14,12 @@ Backend :
 
 - Une base de données composée des questions, des choix, des réponses et des valeurs.
 - Un serveur web qui fournit l'accès à la page html, css, js avec des webservices :
-    - Un webservice pour initialiser les pages (nom : page, RAW)
-    - Un webservice pour récupérer le javascript lié (nom : js, RAW)
-    - un webservice pour récupérer le css lié (nom : css, RAW)
+    - Un webservice pour initialiser les pages (nom : page, url, RAW)
+    - Un webservice pour récupérer le javascript lié (nom : js, url, RAW)
+    - un webservice pour récupérer le css lié (nom : css, url, RAW)
     - Un webservice pour récupérer les questions (nom : quest, JSON)
-    - un webserivce pour récupérer les réponses aux questions (nom : qcm, JSON)
-    - Un webservice pour récupérer les résultats possibles (nom : resultat, RAW)
+    - un webserivce pour récupérer les réponses aux questions (nom : qcm,JSON)
+    - Un webservice pour récupérer les résultats possibles (nom : resultat, total, RAW)
     
 Frontend : 
 
