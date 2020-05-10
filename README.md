@@ -41,21 +41,21 @@ Détail api rest
 
 Détail DB
 
-- La table "choix" est composé de 4 colonnes.
+- La table "choix" est composée de 4 colonnes.
     - cId : C'est l'indice pour  chaque réponse, il est unique.
     - reponse : Ce sont les réponses pour chaque question.
     - valeur : Si la valeur est à 0 c'est faux, si elle est à 1 c'est juste.
     - qId : C'est l'indice en rapport aux réponses, il est commun pour 3 réponses.
     
-- La table "questions" est composé de 2 colonnes.
+- La table "questions" est composée de 2 colonnes.
     - qId : C'est l'indice de la question.
     - quest : Ce sont les questions.
     
-- La table "resultats" est composé 3 colonnes.
-    - tId : L'indice de chaque commentaires.
+- La table "resultats" est composée 3 colonnes.
+    - tId : L'indice de chaque commentaire.
     - titres : Ce sont les commentaires possibles en rapport au résultat.
     - points : Les grades de points possibles à obtenir.
     
--La table "valeurs" est composé de 2 colonnes.
+-La table "valeurs" est composée de 2 colonnes.
     - valeur : Les valeurs possibles des réponses (0 et 1).
     - signification : Les significations des valeurs (FAUX et VRAI).
