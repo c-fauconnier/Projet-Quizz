@@ -33,12 +33,29 @@ Frontend :
 
 Détail api rest
 
-Le webserivce QCM a été réalisé par Christopher Fauconnier et il sert à récupérer les réponses afin de construire la page html, il renvoie sous format JSON.
+- Le webserivce QCM a été réalisé par Christopher Fauconnier et il sert à récupérer les réponses afin de construire la page html, il renvoie sous format JSON.
 
-Le webservice resultat a été réalisé par Simon Kinet et il sert à récupérer les commentaires afin de construire la page résultat de fin.
+- Le webservice resultat a été réalisé par Simon Kinet et il sert à récupérer les commentaires afin de construire la page résultat de fin.
 
-La fonction proc_quest dsert à récupérer l'ID de la question ainsi que la question.
+- La fonction proc_quest sert à récupérer l'ID de la question ainsi que la question.
 
 Détail DB
 
-Présenter les tables et les champs des tables SQL
+- La table "choix" est composé de 4 colonnes.
+    - cId : C'est l'indice pour  chaque réponse, il est unique.
+    - reponse : Ce sont les réponses pour chaque question.
+    - valeur : Si la valeur est à 0 c'est faux, si elle est à 1 c'est juste.
+    - qId : C'est l'indice en rapport aux réponses, il est commun pour 3 réponses.
+    
+- La table "questions" est composé de 2 colonnes.
+    - qId : C'est l'indice de la question.
+    - quest : Ce sont les questions.
+    
+- La table "resultats" est composé 3 colonnes.
+    - tId : L'indice de chaque commentaires.
+    - titres : Ce sont les commentaires possibles en rapport au résultat.
+    - points : Les grades de points possibles à obtenir.
+    
+-La table "valeurs" est composé de 2 colonnes.
+    - valeur : Les valeurs possibles des réponses (0 et 1).
+    - signification : Les significations des valeurs (FAUX et VRAI).
