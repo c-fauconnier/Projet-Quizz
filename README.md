@@ -56,6 +56,6 @@ Détail DB
     - titres : Ce sont les commentaires possibles en rapport au résultat.
     - points : Les grades de points possibles à obtenir.
     
--La table "valeurs" est composée de 2 colonnes.
+- La table "valeurs" est composée de 2 colonnes.
     - valeur : Les valeurs possibles des réponses (0 et 1).
     - signification : Les significations des valeurs (FAUX et VRAI).
