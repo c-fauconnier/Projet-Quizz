@@ -33,7 +33,11 @@ Frontend :
 
 Détail api rest
 
-Pour chaque webservice, vous devez indiquer le endpoint, les paramètre et le format de réponse. Indiquez aussi qui en est l'auteur. (Cela peut être "commun", mais il faut au moins 1 webservice complet personnel par membre du groupe.)
+Le webserivce QCM a été réalisé par Christopher Fauconnier et il sert à récupérer les réponses afin de construire la page html, il renvoie sous format JSON.
+
+Le webservice resultat a été réalisé par Simon Kinet et il sert à récupérer les commentaires afin de construire la page résultat de fin.
+
+La fonction proc_quest dsert à récupérer l'ID de la question ainsi que la question.
 
 Détail DB
 
