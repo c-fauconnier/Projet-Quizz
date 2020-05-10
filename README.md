@@ -21,7 +21,7 @@ Backend :
     - un webservice pour récupérer le css lié (nom : css, url, RAW)
        - c'est l'url du css 
     - Un webservice pour récupérer les questions (nom : quest, JSON)
-    - un webserivce pour récupérer les réponses aux questions (nom : qcm,JSON)
+    - un webserivce pour récupérer les réponses aux questions (nom : qcm, JSON)
     - Un webservice pour récupérer les résultats possibles (nom : resultat, total, RAW)
         - c'est le total de points obtenu par l'utilisateur
     
