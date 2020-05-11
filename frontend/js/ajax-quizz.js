@@ -1,6 +1,6 @@
 "use strict";
 
-//Lors du chargement du document, les fonctions initQst et initQCM vont se lancer.
+//Lors du chargement du document, les fonctions initQst et initQCM vont se lancer. L'ordre a son importance !
 
 document.addEventListener('DOMContentLoaded', initQst);
 document.addEventListener('DOMContentLoaded', initQCM);
@@ -16,27 +16,27 @@ function gid(id){       //fonction servant à retourner un élément par son id 
     return document.getElementById(id);
 }
 
-/*  Fonction principale au lancement de la page englobant 2 autres fonctions (remplirQst,listeQst.
-*   Elle va permettre la création de questions dans l'HTML */
+/*  Fonction principale au lancement de la page englobant 2 autres fonctions (remplirQst,listeQst).
+*   Elle va permettre la création dynamique de questions dans l'HTML */
 
-function initQst(){     //Requête XML employant le webservice 'quest' renvoyant les données de la table 'questions'.
+function initQst(){     //Requête XML employant le webservice 'quest' renvoyant les données de la table 'questions' dans Sybase.
     let xhr = new XMLHttpRequest();
     xhr.open("get","/quest",true);
     xhr.onload = remplirQst;
     xhr.send();
 }
 
-function remplirQst(){      //Sert à l'implémentation des questions créées dans 'listeQst()' dans le innerHTML de la page.
+function remplirQst(){      //Sert à intégrer les questions créées dans 'listeQst()' dans le innerHTML de la page.
     let reponse = JSON.parse(this.responseText);        //on convertit le résultat du xhr en objet JS.
     listeQst(reponse);
     gid(ID_ZONE_QUEST).innerHTML = listeQuestion;       //on utilise les données de la variable 'listeQuestion' retournée auparavant.
 }
 
 function listeQst(api){
-    let j=1;
+    let j=1;         //j va servir à afficher le n° de question en html.
     for (let i=0;i<api.length;i++){     //boucle parcourant tous les résultats de l'api.
-        listeQuestion += "<div id=qst-"+api[i].numQst+">"+j+") "+api[i].question+"</div><br>";      //variable qui servira de code HTML, qu'on va incrémenter à chaque passage de la boucle afin de servir de base pour les futures questions.
-        j++;    //on incrémente j après listeQuestion pour éviter un conflit de numéro dans le code HTML.
+        listeQuestion += "<div id=qst-"+api[i].numQst+">"+j+") "+api[i].question+"</div><br>";      //variable qui servira de code HTML, qu'on va incrémenter à chaque passage de la boucle afin d'obtenir un id pour chaque qcm.
+        j++;    //on incrémente j après listeQuestion pour avoir le même numéro.
     }
 }
 
