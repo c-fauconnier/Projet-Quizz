@@ -1,10 +1,10 @@
 1TL1- Projet Quizz
 
-#Présentation de l'équipe#
+#Présentation de l'équipe
 
 Christopher Fauconnier et Simon Kinet
 
-#Description du projet#
+#Description du projet
 
 C'est un quizz à choix multiples basé sur des thèmes en rapport avec l'informatique. Il faut répondre à 10 questions accompagné de ces 3 choix. Une fois que l'utilisateur aura validé ces choix, un page résultat vous affichera la note ainsi qu'un commentaire de votre prestation.
 
