@@ -21,7 +21,7 @@ function gid(id){       //fonction servant à retourner un élément par son id 
 
 function initQst(){     //Requête XML employant le webservice 'quest' renvoyant les données de la table 'questions'.
     let xhr = new XMLHttpRequest();
-    xhr.open("get","http://localhost:80/quest",true);
+    xhr.open("get","/quest",true);
     xhr.onload = remplirQst;
     xhr.send();
 }
@@ -43,9 +43,9 @@ function listeQst(api){
 /* Deuxième fonction lors du lancement de la page, il est important qu'elle s'exécute en seconde place.
    Elle va employer des fonctions permettant de lier des choix qu'on va créer aux questions désormais existantes.
  */
-function initQCM(){     //Requête XML employant le webservice 'qcm' renvoyant les données de la table 'choix'.
+function initQCM(){     //Requête XML employant le webservice 'qcm' renvoyant les données de la table 'choix' dans Sybase.
     let xhr = new XMLHttpRequest();
-    xhr.open("get","http://localhost:80/qcm",true);
+    xhr.open("get","/qcm",true);
     xhr.onload = remplirChoix;
     xhr.send();
 }
@@ -67,14 +67,14 @@ function listeRep(api){
 /* Bouton de validation du formulaire */
 function valider(event){
     event.preventDefault();     //on bloque l'envoi du formulaire.
-    getChecked();       //renvoie le nombre de bonnes réponses dans la variable stock.
-    document.cookie += stock;       //on ajoute un nouveau cookie contenant la valeur de stock après le modulo 2.
-    window.open('page?url=resultat');       //ouverture dans une nouvelle fenêtre de la page html : resultat.
+    getChecked();       //on compte le nombre de bonnes réponses.
+    document.cookie += stock;       //on ajoute un nouveau cookie contenant la valeur des bonnes réponses après le modulo 2.
+    window.open('/page?url=resultat');       //ouverture dans une nouvelle fenêtre de la page html : resultat.
     return stock=0;     //on réinitialise la valeur de stock pour éviter les erreurs lors d'un spam de validation de formulaire.
 }
 
 function getChecked(){
-    for(let i=1;i<=30;i++){         //boucle pour obtenir la valeur des éléments cochés.
+    for(let i=1;i<=30;i++){         //boucle pour obtenir la valeur des éléments cochés dans la variable stock.
         if (document.getElementById(i).checked === true){
             stock += parseInt(document.getElementById(i).value);
         }

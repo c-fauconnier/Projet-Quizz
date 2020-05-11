@@ -7,14 +7,14 @@ function Result(){      //on regarde la longueur du cookie (qui est un string)
     if(COOKIE.length == 2){
         let char = COOKIE.split('');        //on créé un tableau de STRING avec les valeurs de COOKIE.
         let xhr = new XMLHttpRequest();
-        xhr.open("get","http://localhost:80/resultat?total="+char[1],true);     //on récupère la valeur obtenue après le modulo (voir ajax-quizz.js) avec char[1], char[0] étant la valeur pouvant être impaire.
+        xhr.open("get","/resultat?total="+char[1],true);     //on récupère la valeur obtenue après le modulo (voir ajax-quizz.js) avec char[1], char[0] étant la valeur pouvant être impaire.
         xhr.onload = remplirResult;
         xhr.send();
     }
     else if(COOKIE.length == 4){        //si le user a obtenu 10/10, la valeur de COOKIE est celle-ci : "1010"
         let char = COOKIE.split('');        ////on créé un tableau de STRING avec les valeurs de COOKIE.
         let xhr = new XMLHttpRequest();
-        xhr.open("get","http://localhost:80/resultat?total="+10,true);          //on ajoute 10 mais on aurait pu utiliser ceci: "..."+char[0]+char[1]
+        xhr.open("get","/resultat?total="+10,true);          //on ajoute 10 mais on aurait pu utiliser ceci: "..."+char[0]+char[1]
         xhr.onload = remplirResult;
         xhr.send();
     }
