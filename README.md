@@ -25,7 +25,7 @@ C'est un quizz à choix multiples basé sur des thèmes en rapport avec l'inform
     - Un webservice pour récupérer les résultats possibles (nom : resultat, total, RAW)
         - C'est le total de points obtenu par l'utilisateur
     
-**Frontend : **
+**Frontend :**
 
 - Une page web construite en html, css et js. Celle-ci appelle les webservices précédents afin de proposer ces services :
   - Réaliser le quizz
