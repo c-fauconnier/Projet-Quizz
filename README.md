@@ -1,16 +1,16 @@
 1TL1- Projet Quizz
 
-#Présentation de l'équipe
+# Présentation de l'équipe
 
 Christopher Fauconnier et Simon Kinet
 
-#Description du projet
+# Description du projet
 
 C'est un quizz à choix multiples basé sur des thèmes en rapport avec l'informatique. Il faut répondre à 10 questions accompagné de ces 3 choix. Une fois que l'utilisateur aura validé ces choix, un page résultat vous affichera la note ainsi qu'un commentaire de votre prestation.
 
-**Aspects implémentés**
+# Aspects implémentés
 
-Backend :
+**Backend :**
 
 - Une base de données composée des questions, des choix, des réponses et des valeurs.
 - Un serveur web qui fournit l'accès à la page html, css, js avec des webservices :
@@ -25,7 +25,7 @@ Backend :
     - Un webservice pour récupérer les résultats possibles (nom : resultat, total, RAW)
         - C'est le total de points obtenu par l'utilisateur
     
-Frontend : 
+**Frontend : **
 
 - Une page web construite en html, css et js. Celle-ci appelle les webservices précédents afin de proposer ces services :
   - Réaliser le quizz
@@ -35,7 +35,7 @@ Frontend :
   
 
 
-**Détail api rest**
+# Détail api rest
 
 - Le webservice QCM a été réalisé par Christopher Fauconnier et il sert à récupérer les réponses afin de construire la page html, il renvoie sous format JSON.
 
@@ -43,7 +43,7 @@ Frontend :
 
 - La fonction proc_quest sert à récupérer l'ID de la question ainsi que la question.
 
-**Détail DB**
+# Détail DB
 
 - La table "choix" est composée de 4 colonnes.
     - cId : C'est l'indice pour  chaque réponse, il est unique.
