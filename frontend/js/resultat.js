@@ -7,7 +7,7 @@ function Result(){      //on regarde la longueur du cookie (qui est un string)
     if(COOKIE.length == 2){
         let char = COOKIE.split('');        //on créé un tableau de STRING avec les valeurs de COOKIE.
         let xhr = new XMLHttpRequest();
-        xhr.open("get","/resultat?total="+char[1],true);     //on récupère la valeur obtenue après le modulo (voir ajax-quizz.js) avec char[1], char[0] étant la valeur pouvant être impaire.
+        xhr.open("get","/resultat?total="+char[1],true);     //on récupère la valeur contenue à la 2e place, qui est paire (voir ajax-quizz.js) avec char[1], char[0] étant la valeur pouvant être impaire.
         xhr.onload = remplirResult;
         xhr.send();
     }
@@ -27,7 +27,7 @@ function remplirResult(){
     document.cookie = "";
 }
 
-function zoneText(valeur){      //c'est cette fonction qui va afficher une phrase suite à nos résultats dans l'html.
+function zoneText(valeur){      //c'est cette fonction qui va afficher une phrase suite à nos résultats, dans l'html.
     /*on réutilise les conditions employées dans la fonction Result().
     * Le fonctionnement est similaire avec les char[0],etc.*/
     if(COOKIE.length == 2){
